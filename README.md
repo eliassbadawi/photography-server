@@ -108,9 +108,10 @@ CREATE TABLE users (
 CREATE TABLE sessions (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    price NUMERIC(10,2) NOT NULL,
     description TEXT,
+    price NUMERIC(10,2) NOT NULL,
     duration VARCHAR(50),
+    icon VARCHAR(100),
     image_url TEXT
 );
 
@@ -123,6 +124,7 @@ CREATE TABLE bookings (
     booking_time TIME NOT NULL,
     status VARCHAR(20) DEFAULT 'Pending'
 );
+
 ```
 
 **Run schema:**
