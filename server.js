@@ -21,6 +21,10 @@ app.use("/api/sessions", sessionRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/bookings", bookingsRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Booking System API");
+});
+
 db.connect().then(() => {
   app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
 });
